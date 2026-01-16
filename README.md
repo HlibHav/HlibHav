@@ -34,34 +34,55 @@ I build AI-powered products that combine **multi-agent orchestration**, **RAG/re
 
 ---
 
-### 🚀 What I’m Working On
+### 🚀 What I'm Working On
 **ProductLoop** — an AI-powered platform that accelerates product discovery by turning behavioral data into **synthetic personas** and **instant validation loops**.
-→ Built with **FastAPI**, **LangGraph**, **Weaviate**, and **OpenAI embeddings**.  
+→ Built with **FastAPI**, **LangGraph**, **Weaviate**, and **OpenAI embeddings**.
 
-Other experiments:
-- 🎨 **Bento UI Automation** — apply animated Bento blocks to websites via Claude SDK  
-- 📊 **CitiBike Analytics** — Tableau + Python storytelling dashboard  
+**Recent Highlights:**
+- 🎯 **MMS** — Deployed production AI campaign co-pilot for retail promotional planning
+- 🏥 **Carelink** — Built multi-agent elderly support platform with event-driven architecture
+- 🎤 **AI-interview-** — Launched automated user research platform with psychometric profiling
+- 🌐 **Readdle** — Developed enterprise RAG-powered browser with intelligent content processing
 
 ---
 
 ## 📌 Featured Repositories
 
-- **[bento-brand-api](https://github.com/HlibHav/bento-brand-api)** – Config-driven **Bento UI** automation (Tailwind + shadcn + Framer).
-- **[Readdle](https://github.com/HlibHav/Readdle)** – AI research copilot that turns ephemeral web content into organized knowledge (TypeScript).
-- **[New-York-s-CitiBike-trips-in-2025](https://github.com/HlibHav/New-York-s-CitiBike-trips-in-2025)** – Public Tableau/HTML artifacts for CitiBike analytics.
-- **[AI-Support-Agent](https://github.com/HlibHav/AI-Support-Agent)** – Python agentics for support workflows.
-- **[Taxi](https://github.com/HlibHav/Taxi)** – Notebooks & EDA for mobility data.
+### Recent Projects
 
-> Also exploring: forks like **workshop-improving-r-in-rag**, **ai-dev-tasks**, **adk-mcp-test** for MCP/agent experimentation.
+#### 🤖 AI-Powered Products
+- **[MMS](https://github.com/HlibHav/MMS)** – AI-powered promotional campaign Co-pilot  
+  → Multi-agent system (LangChain + FastAPI + React) that helps retail promotional leads discover opportunities, model scenarios, optimize campaigns, and generate creative briefs. Features Scenario Lab, Optimization Engine, and Post-Mortem Analytics.
+
+- **[Carelink](https://github.com/HlibHav/Carelink)** – AI companion for elderly support  
+  → Multi-service platform with conversational companion. Architecture: Dialogue/Coach/Safety agents, Physical/Mind-Behavior engines, Weaviate-backed memory, event-driven microservices (TypeScript/Node.js).
+
+- **[AI-interview-](https://github.com/HlibHav/AI-interview-)** – Deep user insights, instantly  
+  → AI-powered qualitative research platform with automated user interviews, psychometric profiling (Big Five + Enneagram), and real-time intelligence. Built with Next.js 14, LangChain, Weaviate, Beyond Presence. 90% cost reduction vs traditional interviews.
+
+- **[Readdle](https://github.com/HlibHav/Readdle)** – AI-agentic Web browser  
+  → Enterprise-grade RAG-powered browser with intelligent file processing, content analysis, and vector search. Features AI-powered filename generation, smart file management, and Phoenix observability. Built with Next.js, Weaviate, LangChain.
+
+#### 📊 Data Analysis Projects
+- **[New-York-s-CitiBike-trips-in-2025](https://github.com/HlibHav/New-York-s-CitiBike-trips-in-2025)** – CitiBike analytics dashboard  
+  → Interactive Streamlit dashboard analyzing 1M+ trips with weather correlation (0.768 coefficient), predictive modeling, and 15+ visualization types. Live dashboard with real-time filtering and geospatial analysis.
+
+- **[Taxi](https://github.com/HlibHav/Taxi)** – Fraud detection analysis  
+  → Machine learning project with 97% accuracy and 0.94 ROC AUC for payment failure prediction. Comprehensive EDA on 200K+ transactions, clustering analysis, and geographic risk pattern identification using STAR framework.
+
+- **[20th-century](https://github.com/HlibHav/20th-century)** – Historical data analysis (Jupyter Notebook)
+
+
 
 
 
 ### 💡 Focus Areas
-- Retrieval-first RAG pipelines  
-- Multi-agent orchestration  
-- Config & schema consistency  
-- Vector-based analytics  
-- Human-in-the-loop AI validation  
+- **Retrieval-first RAG pipelines** — Weaviate-powered vector search with hybrid retrieval
+- **Multi-agent orchestration** — LangGraph workflows for complex AI systems (MMS, Carelink, AI-interview-)
+- **Production AI systems** — Phoenix observability, event-driven architectures, scalable microservices
+- **Vector-based analytics** — Embedding-driven insights, semantic similarity, pattern recognition
+- **Human-in-the-loop AI validation** — Real-time monitoring, confidence scoring, adaptive workflows
+- **End-to-end product delivery** — From research & strategy to production deployment with measurable business impact  
 
 ---
 
@@ -81,4 +102,4 @@ Other experiments:
 🌿 Loves aquariums & plants  
 🧠 Believe that **AI is the new UX**
 
-> “Build systems that think, not just execute.” — *Hlib*## Hi there 👋
+> "Build systems that think, not just execute." — *Hlib*
