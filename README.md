@@ -1,35 +1,42 @@
 # Hlib Havryliuk
 
-**AI Product Manager who builds what he specs.**
+**Product manager, AI builder and pipeline engineer.**
 
-9 years in product (fintech, mobility, SaaS). Now focused on multi-agent AI systems — designing them, prototyping them, shipping them. Based in Berlin.
+I decide what an AI pipeline should do, then build the runtime that does exactly that. Nine years in product across fintech, mobility and SaaS. Based in Berlin.
 
 ---
 
-### What I build
+### What I'm building now
 
-**[ProductLoop](https://github.com/HlibHav/ProductLoop)** — AI discovery platform that turns behavioral data into synthetic personas for instant product validation. FastAPI + LangGraph + Weaviate.
+**LeanOS** *(private)* — a deterministic runtime for generative pipelines that cross vendor boundaries. A run cannot report `completed` while a required step is silently absent; it raises. Every step records whether a human or a machine decided it. A raw hand-off between two vendors refuses before the credit is spent, and an override is a logged operator act rather than a quiet fallback.
 
-**[MMS](https://github.com/HlibHav/MMS)** — Multi-agent co-pilot for retail campaign planning. Scenario modeling, optimization engine, post-mortem analytics. LangChain + FastAPI + React.
+Proven on real runs: three live vendors (ComfyUI, Magnific, Higgsfield) behind one adapter Protocol, the same captured recipe executed on all three, cross-vendor transfer on two pairs with a gate at the seam — Magnific→Higgsfield image→video 4/4, ComfyUI↔Magnific 13/13 in 684s. Python, FastAPI, Postgres, Pydantic, pytest, strict mypy.
 
-**[Carelink](https://github.com/HlibHav/Carelink)** — Elderly support platform with dialogue, coach, and safety agents. Event-driven microservices, Weaviate memory. TypeScript/Node.js.
+---
 
-**[AI-interview-](https://github.com/HlibHav/AI-interview-)** — Automated qualitative research with psychometric profiling (Big Five + Enneagram). 90% cost reduction vs traditional interviews. Next.js + LangChain + Weaviate.
+### Systems I've shipped in the open
 
-**[Readdle](https://github.com/HlibHav/Readdle)** — Enterprise RAG browser with smart file processing and vector search. Next.js + Weaviate + Phoenix observability.
+**[AI-interview-](https://github.com/HlibHav/AI-interview-)** — Multi-agent system that runs qualitative interviews end to end: goal clarification, script planning, live conversation, synthesis. Real-time sentiment and dynamic follow-up generation. Next.js + LangChain + Weaviate.
 
-### Data projects
+**[AI-webbrowser](https://github.com/HlibHav/AI-webbrowser)** — Agentic research browser. Multi-pass RAG with three-stage reasoning and confidence scoring, unified vector (Weaviate) + full-text (Typesense) retrieval, local model support via Apple OpenELM (270M–3B). React + Node + Phoenix/OpenTelemetry.
 
-**[CitiBike Analytics](https://github.com/HlibHav/New-York-s-CitiBike-trips-in-2025)** — Streamlit dashboard, 1M+ trips, weather correlation at 0.768. Live filtering + geospatial analysis.
+**[Carelink](https://github.com/HlibHav/Carelink)** — Elderly-support platform: dialogue, coach and safety agents on event-driven microservices with Weaviate-backed memory.
 
-**[Taxi Fraud Detection](https://github.com/HlibHav/Taxi)** — 97% accuracy, 0.94 ROC AUC on 200K+ transactions. Clustering + geographic risk patterns.
+**[MMS](https://github.com/HlibHav/MMS)** — Six-agent retail campaign co-pilot built in a 14-hour hackathon: briefing, baseline forecast, scenario lab, optimisation, creative, post-mortem. LangChain + FastAPI + DuckDB.
+
+<details>
+<summary>Earlier data work</summary>
+
+**[CitiBike Analytics](https://github.com/HlibHav/New-York-s-CitiBike-trips-in-2025)** — 1M+ trips, weather correlation 0.768, geospatial filtering in Streamlit.
+
+**[Taxi Fraud Detection](https://github.com/HlibHav/Taxi)** — 0.94 ROC AUC on 200K+ transactions; clustering plus geographic risk patterns.
+
+</details>
 
 ---
 
 ### How I work
 
-I sit at the intersection of product thinking and technical execution. I don't just write specs — I prototype with LangGraph, build RAG pipelines with Weaviate, deploy on Vercel, and instrument with Phoenix. My stack: Python, FastAPI, LangGraph, Next.js, Supabase, Docker.
+Product side: discovery, specs, and deciding what is worth building at all. Pipeline side: adapter protocols, gate and override semantics, per-step run accounting, LangGraph state machines, RAG over vector + full-text, observability with Phoenix and OpenTelemetry. I hold the line that a system should refuse rather than lie: if a step didn't run, the record says so.
 
----
-
-🌐 [hlib.work](https://hlib.work) · 💼 [LinkedIn](https://linkedin.com/in/glebaz) · 📬 glib.gavryliuk@gmail.com
+🌐 [hlib.work](https://hlib.work) · [LinkedIn](https://linkedin.com/in/glebaz) · glib.gavryliuk@gmail.com
