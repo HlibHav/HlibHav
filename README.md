@@ -8,9 +8,11 @@ I decide what an AI pipeline should do, then build the runtime that does exactly
 
 ### What I'm building now
 
-**LeanOS** *(private)* — a deterministic runtime for generative pipelines that cross vendor boundaries. A run cannot report `completed` while a required step is silently absent; it raises. Every step records whether a human or a machine decided it. A raw hand-off between two vendors refuses before the credit is spent, and an override is a logged operator act rather than a quiet fallback.
+**LeanOS** *(private)* — a memory of a studio's best decisions that another artist can pick up. How the studio solved a hard shot, with which tools and settings, and what the founder rejected along the way. Someone else applies it to a new scene, and the founder only approves. Founders' hours stop capping how many projects a studio can run.
 
-Proven on real runs: three live vendors (ComfyUI, Magnific, Higgsfield) behind one adapter Protocol, the same captured recipe executed on all three, cross-vendor transfer on two pairs with a gate at the seam — Magnific→Higgsfield image→video 4/4, ComfyUI↔Magnific 13/13 in 684s. Python, FastAPI, Postgres, Pydantic, pytest, strict mypy.
+Proven so far: an engineer who didn't build the system re-ran three recorded methods on their own accounts, 34 of 36 shots. In a blind gate I accepted 88% of their clips vs 83% of my own and guessed authorship 49% of the time. Methods move across four vendors (ComfyUI, Magnific, Higgsfield, Runway) with a human gate at every seam. 
+
+Next: transfer to scenes the author never made. **I'm looking for AI artists to join as creative partners:** you bring a method, it stays yours, and we test whether someone else can carry it to new scenes. Python, FastAPI, Postgres, Pydantic, pytest, strict mypy.
 
 ---
 
