@@ -43,6 +43,33 @@ Next: transfer to scenes the author never made. **I'm looking for AI artists to 
 
 ### How I work
 
-Product side: discovery, specs, and deciding what is worth building at all. Pipeline side: adapter protocols, gate and override semantics, per-step run accounting, LangGraph state machines, RAG over vector + full-text, observability with Phoenix and OpenTelemetry. I hold the line that a system should refuse rather than lie: if a step didn't run, the record says so.
+I build with agents in five loops. Agents do the typing; three calls stay mine: approving the spec, answering when an agent escalates, and saying "go" on a merge.
+
+```mermaid
+flowchart LR
+  subgraph SDD["Build"]
+    I["Ticket or idea"] --> SP["Spec"] --> OK{"I approve<br/>the spec"}
+    OK --> TW["Failing tests"] --> IM["Agent makes<br/>them pass"] --> AR["Architecture + security<br/>review; a verifier mutates<br/>the code to test the tests"]
+  end
+  subgraph REV["Review"]
+    CR["Code review<br/>+ fixes"] --> VF["verify + CI"] --> VA["Separate<br/>validator"] --> GO{"My “go”"}
+    VA -- "fail" --> CR
+  end
+  subgraph MAIN["Keep main honest"]
+    M["main"] --> NC["Nightly CI +<br/>README run from<br/>a clean clone"]
+    M --> IX["Daily code index<br/>+ status file"]
+  end
+  subgraph LEARN["Learn"]
+    L["Same lesson<br/>twice"] --> EV["Eval case that fails<br/>without the fix"] --> SK["Rule or<br/>skill changes"]
+  end
+  AR -- "draft PR" --> CR
+  GO --> M
+  NC -- "red → issue" --> CR
+  IX -. "context for the next spec" .-> SP
+  VA -. "findings" .-> L
+  SK -. "next run" .-> IM
+```
+
+One line holds across all of it: a system should refuse rather than lie. If a step didn't run, the record says so.
 
 🌐 [hlib.work](https://hlib.work) · [LinkedIn](https://linkedin.com/in/glebaz) · glib.gavryliuk@gmail.com
