@@ -18,6 +18,10 @@ Next: transfer to scenes the author never made. **I'm looking for AI artists to 
 
 ### Systems I've shipped in the open
 
+**[higgs-agent-factory](https://github.com/HlibHav/higgs-agent-factory)** — Built in one day at the Boson AI hackathon in Toronto (2026-10-24). Turns a one-line brief into a voice agent on Boson's Higgs Realtime API, then refuses to release it until it passes an eval gate: scripted callers over real audio, an LLM judge grading every answer twice, latency and barge-in measured client-side. A coach rewrites only the skills that failed; on a live run one round took an agent from 4 of 6 scenarios to 6 of 6. Python + TypeScript + Higgs Realtime + Claude.
+
+**[dev-digest-ai-marketplace](https://github.com/HlibHav/dev-digest-ai-marketplace)** — Claude Code plugin marketplace for spec-driven development, extracted from my DevDigest harness and generalised for any repo. Four plugins: a shared done gate, a read-only researcher, an architecture reviewer, and an idea → spec → plan workflow that ties them together. Versioned releases with dependency ranges and a written threat model.
+
 **[AI-interview-](https://github.com/HlibHav/AI-interview-)** — Multi-agent system that runs qualitative interviews end to end: goal clarification, script planning, live conversation, synthesis. Real-time sentiment and dynamic follow-up generation. Next.js + LangChain + Weaviate.
 
 **[AI-webbrowser](https://github.com/HlibHav/AI-webbrowser)** — Agentic research browser. Multi-pass RAG with three-stage reasoning and confidence scoring, unified vector (Weaviate) + full-text (Typesense) retrieval, local model support via Apple OpenELM (270M–3B). React + Node + Phoenix/OpenTelemetry.
