@@ -43,7 +43,9 @@ Next: transfer to scenes the author never made. **I'm looking for AI artists to 
 
 ### How I work
 
-I build with agents in four loops. Agents do the typing; three calls stay mine: approving the spec, answering when an agent escalates, and saying "go" on a merge.
+Product side first: discovery with studios and deciding what is worth building at all. Every bet becomes a hypothesis with a threshold set before the test and a pivot condition written before the result. Only what survives that becomes a spec.
+
+Then I build with agents in four loops. Agents do the typing; three calls stay mine: approving the spec, answering when an agent escalates, and saying "go" on a merge.
 
 ```mermaid
 flowchart LR
