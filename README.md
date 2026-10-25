@@ -49,12 +49,27 @@ Then I build with agents in four loops. Agents do the typing; three calls stay m
 
 ```mermaid
 flowchart LR
-  B["<b>Build</b><br/>spec I approve →<br/>failing tests →<br/>agent makes them pass"] -- "draft PR" --> R["<b>Review</b><br/>code review →<br/>separate validator →<br/>my “go”"]
-  R -- "merge" --> M["<b>Keep main honest</b><br/>nightly CI,<br/>clean-clone README run,<br/>daily code index"]
-  M -- "red → issue" --> R
-  M -- "index + status<br/>feed the next spec" --> B
-  R -. "findings" .-> L["<b>Learn</b><br/>same lesson twice →<br/>eval that fails without it →<br/>rule or skill"]
-  L -. "next run" .-> B
+  subgraph SDD["Build"]
+    I["Ticket or idea"] --> SP["Spec"] --> OK{"I approve<br/>the spec"}
+    OK --> TW["Failing tests"] --> IM["Agent makes<br/>them pass"] --> AR["Architecture + security<br/>review; a verifier mutates<br/>the code to test the tests"]
+  end
+  subgraph REV["Review"]
+    CR["Code review<br/>+ fixes"] --> VF["verify + CI"] --> VA["Separate<br/>validator"] --> GO{"My “go”"}
+    VA -- "fail" --> CR
+  end
+  subgraph MAIN["Keep main honest"]
+    M["main"] --> NC["Nightly CI +<br/>README run from<br/>a clean clone"]
+    M --> IX["Daily code index<br/>+ status file"]
+  end
+  subgraph LEARN["Learn"]
+    L["Same lesson<br/>twice"] --> EV["Eval case that fails<br/>without the fix"] --> SK["Rule or<br/>skill changes"]
+  end
+  AR -- "draft PR" --> CR
+  GO --> M
+  NC -- "red → issue" --> CR
+  IX -. "context for the next spec" .-> SP
+  VA -. "findings" .-> L
+  SK -. "next run" .-> IM
 ```
 
 One line holds across all of it: a system should refuse rather than lie. If a step didn't run, the record says so.
